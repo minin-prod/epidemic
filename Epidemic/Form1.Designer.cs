@@ -56,22 +56,24 @@
             // 
             // usernamePanel
             // 
+            this.usernamePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.usernamePanel.BackColor = System.Drawing.Color.Transparent;
             this.usernamePanel.BackgroundImage = global::Epidemic.Auth.Properties.Resources.TextBox;
             this.usernamePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.usernamePanel.Controls.Add(this.usernameBox);
-            this.usernamePanel.Location = new System.Drawing.Point(454, 181);
+            this.usernamePanel.Location = new System.Drawing.Point(498, 181);
             this.usernamePanel.Name = "usernamePanel";
             this.usernamePanel.Size = new System.Drawing.Size(225, 50);
             this.usernamePanel.TabIndex = 1;
             // 
             // passwordPanel
             // 
+            this.passwordPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordPanel.BackColor = System.Drawing.Color.Transparent;
             this.passwordPanel.BackgroundImage = global::Epidemic.Auth.Properties.Resources.TextBox;
             this.passwordPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.passwordPanel.Controls.Add(this.passwordBox);
-            this.passwordPanel.Location = new System.Drawing.Point(454, 257);
+            this.passwordPanel.Location = new System.Drawing.Point(498, 257);
             this.passwordPanel.Name = "passwordPanel";
             this.passwordPanel.Size = new System.Drawing.Size(225, 50);
             this.passwordPanel.TabIndex = 2;
@@ -89,10 +91,11 @@
             // 
             // passwordText
             // 
+            this.passwordText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordText.AutoSize = true;
             this.passwordText.BackColor = System.Drawing.Color.Transparent;
             this.passwordText.ForeColor = System.Drawing.Color.White;
-            this.passwordText.Location = new System.Drawing.Point(610, 237);
+            this.passwordText.Location = new System.Drawing.Point(654, 237);
             this.passwordText.Name = "passwordText";
             this.passwordText.Size = new System.Drawing.Size(69, 17);
             this.passwordText.TabIndex = 1;
@@ -100,10 +103,11 @@
             // 
             // usernameText
             // 
+            this.usernameText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.usernameText.AutoSize = true;
             this.usernameText.BackColor = System.Drawing.Color.Transparent;
             this.usernameText.ForeColor = System.Drawing.Color.White;
-            this.usernameText.Location = new System.Drawing.Point(606, 161);
+            this.usernameText.Location = new System.Drawing.Point(650, 161);
             this.usernameText.Name = "usernameText";
             this.usernameText.Size = new System.Drawing.Size(73, 17);
             this.usernameText.TabIndex = 3;
@@ -111,11 +115,12 @@
             // 
             // loginPanel
             // 
+            this.loginPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.loginPanel.BackColor = System.Drawing.Color.Transparent;
             this.loginPanel.BackgroundImage = global::Epidemic.Auth.Properties.Resources.TextBox;
             this.loginPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.loginPanel.Controls.Add(this.loginLabel);
-            this.loginPanel.Location = new System.Drawing.Point(455, 313);
+            this.loginPanel.Location = new System.Drawing.Point(499, 313);
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(109, 35);
             this.loginPanel.TabIndex = 3;
@@ -125,7 +130,7 @@
             // 
             this.loginLabel.AutoSize = true;
             this.loginLabel.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabel.Location = new System.Drawing.Point(31, 8);
+            this.loginLabel.Location = new System.Drawing.Point(31, 9);
             this.loginLabel.Name = "loginLabel";
             this.loginLabel.Size = new System.Drawing.Size(48, 17);
             this.loginLabel.TabIndex = 0;
@@ -134,11 +139,12 @@
             // 
             // registerPanel
             // 
+            this.registerPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.registerPanel.BackColor = System.Drawing.Color.Transparent;
             this.registerPanel.BackgroundImage = global::Epidemic.Auth.Properties.Resources.TextBox;
             this.registerPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.registerPanel.Controls.Add(this.registerLabel);
-            this.registerPanel.Location = new System.Drawing.Point(570, 313);
+            this.registerPanel.Location = new System.Drawing.Point(614, 313);
             this.registerPanel.Name = "registerPanel";
             this.registerPanel.Size = new System.Drawing.Size(109, 35);
             this.registerPanel.TabIndex = 4;
@@ -147,7 +153,7 @@
             // 
             this.registerLabel.AutoSize = true;
             this.registerLabel.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerLabel.Location = new System.Drawing.Point(20, 8);
+            this.registerLabel.Location = new System.Drawing.Point(20, 9);
             this.registerLabel.Name = "registerLabel";
             this.registerLabel.Size = new System.Drawing.Size(72, 17);
             this.registerLabel.TabIndex = 1;
@@ -161,7 +167,7 @@
             this.AutoSize = true;
             this.BackgroundImage = global::Epidemic.Auth.Properties.Resources.Main;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(721, 420);
+            this.ClientSize = new System.Drawing.Size(765, 420);
             this.Controls.Add(this.registerPanel);
             this.Controls.Add(this.loginPanel);
             this.Controls.Add(this.usernameText);

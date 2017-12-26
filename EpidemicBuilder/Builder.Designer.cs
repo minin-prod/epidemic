@@ -47,19 +47,23 @@
             this.heirarchyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip_helpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.heirarchy = new System.Windows.Forms.Panel();
+            this.editor = new System.Windows.Forms.Panel();
+            this.properties = new System.Windows.Forms.Panel();
+            this.toolbox = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.editorTabs = new System.Windows.Forms.TabControl();
+            this.editorTabs_editor = new System.Windows.Forms.TabPage();
+            this.editorTabs_preview = new System.Windows.Forms.TabPage();
             this.toolStrip.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.editor.SuspendLayout();
+            this.editorTabs.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip
             // 
-            this.toolStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.toolStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.toolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStrip_fileMenu,
@@ -148,42 +152,42 @@
             // toolStrip_console
             // 
             this.toolStrip_console.Name = "toolStrip_console";
-            this.toolStrip_console.Size = new System.Drawing.Size(181, 26);
+            this.toolStrip_console.Size = new System.Drawing.Size(151, 26);
             this.toolStrip_console.Text = "Console";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(178, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(148, 6);
             // 
             // toolStrip_properties
             // 
             this.toolStrip_properties.Name = "toolStrip_properties";
-            this.toolStrip_properties.Size = new System.Drawing.Size(181, 26);
+            this.toolStrip_properties.Size = new System.Drawing.Size(151, 26);
             this.toolStrip_properties.Text = "Properties";
             // 
             // toolStrip_toolbox
             // 
             this.toolStrip_toolbox.Name = "toolStrip_toolbox";
-            this.toolStrip_toolbox.Size = new System.Drawing.Size(181, 26);
+            this.toolStrip_toolbox.Size = new System.Drawing.Size(151, 26);
             this.toolStrip_toolbox.Text = "Toolbox";
             // 
             // toolStrip_preview
             // 
             this.toolStrip_preview.Name = "toolStrip_preview";
-            this.toolStrip_preview.Size = new System.Drawing.Size(181, 26);
+            this.toolStrip_preview.Size = new System.Drawing.Size(151, 26);
             this.toolStrip_preview.Text = "Preview";
             // 
             // toolStrip_editor
             // 
             this.toolStrip_editor.Name = "toolStrip_editor";
-            this.toolStrip_editor.Size = new System.Drawing.Size(181, 26);
+            this.toolStrip_editor.Size = new System.Drawing.Size(151, 26);
             this.toolStrip_editor.Text = "Editor";
             // 
             // heirarchyToolStripMenuItem
             // 
             this.heirarchyToolStripMenuItem.Name = "heirarchyToolStripMenuItem";
-            this.heirarchyToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.heirarchyToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
             this.heirarchyToolStripMenuItem.Text = "Heirarchy";
             // 
             // toolStrip_helpMenu
@@ -195,62 +199,96 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Controls.Add(this.heirarchy);
+            this.flowLayoutPanel1.Controls.Add(this.editor);
+            this.flowLayoutPanel1.Controls.Add(this.properties);
+            this.flowLayoutPanel1.Controls.Add(this.toolbox);
             this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Controls.Add(this.panel3);
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
-            this.flowLayoutPanel1.Controls.Add(this.panel4);
-            this.flowLayoutPanel1.Controls.Add(this.panel5);
-            this.flowLayoutPanel1.Controls.Add(this.panel6);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 28);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(844, 518);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
+            // heirarchy
+            // 
+            this.heirarchy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.heirarchy.Location = new System.Drawing.Point(3, 3);
+            this.heirarchy.Name = "heirarchy";
+            this.heirarchy.Size = new System.Drawing.Size(200, 324);
+            this.heirarchy.TabIndex = 0;
+            // 
+            // editor
+            // 
+            this.editor.Controls.Add(this.editorTabs);
+            this.editor.Location = new System.Drawing.Point(209, 3);
+            this.editor.Name = "editor";
+            this.editor.Size = new System.Drawing.Size(426, 324);
+            this.editor.TabIndex = 2;
+            // 
+            // properties
+            // 
+            this.properties.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.properties.Location = new System.Drawing.Point(641, 3);
+            this.properties.Name = "properties";
+            this.properties.Size = new System.Drawing.Size(200, 324);
+            this.properties.TabIndex = 1;
+            // 
+            // toolbox
+            // 
+            this.toolbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.toolbox.Location = new System.Drawing.Point(3, 333);
+            this.toolbox.Name = "toolbox";
+            this.toolbox.Size = new System.Drawing.Size(415, 185);
+            this.toolbox.TabIndex = 3;
+            // 
             // panel1
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Location = new System.Drawing.Point(424, 333);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 324);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(415, 185);
+            this.panel1.TabIndex = 4;
             // 
-            // panel3
+            // editorTabs
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(209, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(426, 324);
-            this.panel3.TabIndex = 2;
+            this.editorTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.editorTabs.Controls.Add(this.editorTabs_editor);
+            this.editorTabs.Controls.Add(this.editorTabs_preview);
+            this.editorTabs.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.editorTabs.ItemSize = new System.Drawing.Size(36, 21);
+            this.editorTabs.Location = new System.Drawing.Point(0, 1);
+            this.editorTabs.Name = "editorTabs";
+            this.editorTabs.Padding = new System.Drawing.Point(0, 0);
+            this.editorTabs.SelectedIndex = 0;
+            this.editorTabs.Size = new System.Drawing.Size(423, 323);
+            this.editorTabs.TabIndex = 0;
             // 
-            // panel2
+            // editorTabs_editor
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(641, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 324);
-            this.panel2.TabIndex = 1;
+            this.editorTabs_editor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(100)))));
+            this.editorTabs_editor.Location = new System.Drawing.Point(4, 25);
+            this.editorTabs_editor.Margin = new System.Windows.Forms.Padding(0);
+            this.editorTabs_editor.Name = "editorTabs_editor";
+            this.editorTabs_editor.Size = new System.Drawing.Size(415, 294);
+            this.editorTabs_editor.TabIndex = 0;
+            this.editorTabs_editor.Text = "Editor";
             // 
-            // panel4
+            // editorTabs_preview
             // 
-            this.panel4.Location = new System.Drawing.Point(3, 333);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 185);
-            this.panel4.TabIndex = 3;
-            // 
-            // panel5
-            // 
-            this.panel5.Location = new System.Drawing.Point(209, 333);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(426, 185);
-            this.panel5.TabIndex = 4;
-            // 
-            // panel6
-            // 
-            this.panel6.Location = new System.Drawing.Point(641, 333);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(200, 185);
-            this.panel6.TabIndex = 5;
+            this.editorTabs_preview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(100)))));
+            this.editorTabs_preview.Location = new System.Drawing.Point(4, 25);
+            this.editorTabs_preview.Margin = new System.Windows.Forms.Padding(0);
+            this.editorTabs_preview.Name = "editorTabs_preview";
+            this.editorTabs_preview.Size = new System.Drawing.Size(415, 294);
+            this.editorTabs_preview.TabIndex = 1;
+            this.editorTabs_preview.Text = "Preview";
             // 
             // Builder
             // 
@@ -267,6 +305,8 @@
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.editor.ResumeLayout(false);
+            this.editorTabs.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,12 +333,14 @@
         private System.Windows.Forms.ToolStripMenuItem toolStrip_helpMenu;
         private System.Windows.Forms.ToolStripMenuItem heirarchyToolStripMenuItem;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel heirarchy;
+        private System.Windows.Forms.Panel editor;
+        private System.Windows.Forms.Panel properties;
+        private System.Windows.Forms.Panel toolbox;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TabControl editorTabs;
+        private System.Windows.Forms.TabPage editorTabs_editor;
+        private System.Windows.Forms.TabPage editorTabs_preview;
     }
 }
 
