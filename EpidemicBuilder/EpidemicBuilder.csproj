@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CF0E4038-879A-4A32-A8A1-86CC39BA6286}</ProjectGuid>
+    <ProjectGuid>{E0ECC6E0-76A7-4415-9C5A-5931447B99C9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Epidemic.Auth</RootNamespace>
-    <AssemblyName>Epidemic</AssemblyName>
+    <RootNamespace>Epidemic.Builder</RootNamespace>
+    <AssemblyName>EpidemicBuilder</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,20 +45,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuthManager.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Builder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Builder.Designer.cs">
+      <DependentUpon>Builder.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Builder.resx">
+      <DependentUpon>Builder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -81,19 +80,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Main.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="TextBox.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EpidemicBuilder\EpidemicBuilder.csproj">
-      <Project>{e0ecc6e0-76a7-4415-9c5a-5931447b99c9}</Project>
-      <Name>EpidemicBuilder</Name>
-    </ProjectReference>
     <ProjectReference Include="..\StandardAssets\StandardAssets.csproj">
       <Project>{0816604f-481e-4121-824c-68c502b4b7f9}</Project>
       <Name>StandardAssets</Name>

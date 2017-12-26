@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Epidemic.Assets;
+using Epidemic.Builder;
 
-namespace Epidemic.Auth
+namespace Epidemic.Builder
 {
     static class Program
     {
@@ -16,7 +18,7 @@ namespace Epidemic.Auth
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new Builder(new AuthToken()));
         }
     }
 }
