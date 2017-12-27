@@ -28,6 +28,7 @@ namespace Epidemic.Builder
 
         #region Functions
         public string fetchPath() => Directory.GetCurrentDirectory();
+        public void updateElem() => selectedElem.elem = (Control)propertiesContent.SelectedObject;
         #endregion
 
         #region Event Handlers
@@ -105,23 +106,6 @@ namespace Epidemic.Builder
             }
         }
 
-        private void propertiesContent_PropertyValueChanged(object s, PropertyValueChangedEventArgs e)
-        {
-            if (e.ChangedItem.Value.ToString() == "Name")
-            {
-                foreach (string elem in hierarchyContent.Nodes)
-                {
-                    if (elem == selectedElem.elem.Name)
-                    {
-                        hierarchyContent.Nodes.Find(elem, true)[0].Text = e.ChangedItem.Label.ToString();
-                        break;
-                    }
-                }
-            }
-
-            selectedElem.elem = (Control)propertiesContent.SelectedObject;
-        }
-
         private void hierarchyRenameButton_Click(object sender, EventArgs e)
         {
             var newName = hierarchyRenameBox.Text;
@@ -132,6 +116,8 @@ namespace Epidemic.Builder
                 selectedElem.elem.Name = newName;
             }
         }
+
+        private void propertiesContent_PropertyValueChanged(object s, PropertyValueChangedEventArgs e) => updateElem();
         #endregion
     }
 }
