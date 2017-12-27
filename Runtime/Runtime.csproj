@@ -42,7 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefaultElement.cs" />
+    <Compile Include="BoxControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BoxControl.Designer.cs">
+      <DependentUpon>BoxControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Elements.cs" />
     <Compile Include="EngineWindow.cs">
       <SubType>UserControl</SubType>
@@ -53,6 +61,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BoxControl.resx">
+      <DependentUpon>BoxControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EngineWindow.resx">
       <DependentUpon>EngineWindow.cs</DependentUpon>
     </EmbeddedResource>

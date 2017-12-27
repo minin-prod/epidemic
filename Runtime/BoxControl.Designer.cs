@@ -1,4 +1,4 @@
-﻿namespace Epidemic.Runtime
+﻿namespace Epidemic.Runtime.Elements
 {
     partial class BoxControl
     {
@@ -32,11 +32,11 @@
             // 
             // BoxControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.Name = "BoxControl";
             this.Size = new System.Drawing.Size(100, 100);
+            this.Load += new System.EventHandler(this.BoxControl_Load);
             this.ResumeLayout(false);
 
         }

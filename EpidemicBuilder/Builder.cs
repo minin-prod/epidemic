@@ -28,7 +28,7 @@ namespace Epidemic.Builder
 
         #region Functions
         public string fetchPath() => Directory.GetCurrentDirectory();
-        public void updateElem() => selectedElem.elem = (Control)propertiesContent.SelectedObject;
+        public void updateElem() => selectedElem.elem = (ElementControl)propertiesContent.SelectedObject;
         #endregion
 
         #region Event Handlers
@@ -63,17 +63,13 @@ namespace Epidemic.Builder
             {
                 editorEngine.elemRegistry = previewEngine.elemRegistry;
 
-                editorEngine.Controls.Clear();
-                foreach (Element elem in editorEngine.elemRegistry)
-                    editorEngine.Controls.Add(elem.elem);
+                editorEngine.render();
             }
             else
             {
                 previewEngine.elemRegistry = editorEngine.elemRegistry;
 
-                previewEngine.Controls.Clear();
-                foreach (Element elem in previewEngine.elemRegistry)
-                    previewEngine.Controls.Add(elem.elem);
+                previewEngine.render();
             }
         }
 

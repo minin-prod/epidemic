@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Epidemic.Runtime
+namespace Epidemic.Runtime.Elements
 {
-    public partial class BoxControl : UserControl
+    public partial class BoxControl : ElementControl
     {
         public BoxControl()
         {
             InitializeComponent();
+            Anchor = AnchorStyles.None;
         }
+
+        private void BoxControl_Load(object sender, EventArgs e) => OnLoad();
+
+        public void OnLoad() {  }
     }
 }
