@@ -10,15 +10,7 @@ namespace Epidemic.Runtime.Elements
 {
     public class Element
     {
-        public Control elem = new Panel();
+        public Control elem;
         public string type;
-
-        public void Init()
-        {
-            elem.BackColor = Color.Black;
-            elem.Width = 100;
-            elem.Height = 100;
-            elem.Location = new Point(0,0);
-        }
     }
 }

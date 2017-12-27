@@ -41,7 +41,6 @@ namespace Epidemic.Runtime
         #region Functions
         public void addElement(Element elem)
         {
-            elem.Init();
             elemRegistry.Add(elem);
             Controls.Add(elem.elem);
         }

@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Epidemic.Runtime.Elements
+namespace Epidemic.Runtime
 {
-    public class Box : Element
+    public partial class BoxControl : UserControl
     {
-        public Box()
+        public BoxControl()
         {
-            type = "Box";
-            elem = new BoxControl();
-            elem.Name = type;
+            InitializeComponent();
         }
     }
 }
