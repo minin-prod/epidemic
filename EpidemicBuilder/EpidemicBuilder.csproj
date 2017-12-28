@@ -51,10 +51,19 @@
     <Compile Include="Builder.Designer.cs">
       <DependentUpon>Builder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager.Designer.cs">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Builder.resx">
       <DependentUpon>Builder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager.resx">
+      <DependentUpon>Manager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,6 +97,21 @@
       <Project>{0816604f-481e-4121-824c-68c502b4b7f9}</Project>
       <Name>StandardAssets</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArrowDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArrowUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Rename.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ok.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

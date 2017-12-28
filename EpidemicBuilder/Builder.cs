@@ -59,7 +59,7 @@ namespace Epidemic.Builder
             }
         }
         #endregion
-
+         
         #region Toolbox
         private void toolboxContents_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -129,7 +129,12 @@ namespace Epidemic.Builder
 
         private void hierarchyManageButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("ERor keK");
+            var HierarchyManager = new Manager();
+            var c = HierarchyManager.Open(hierarchyContent.Nodes);
+
+            hierarchyContent.Nodes.Clear();
+            foreach (TreeNode n in c)
+                hierarchyContent.Nodes.Add(n.Text);
         }
         #endregion
 
