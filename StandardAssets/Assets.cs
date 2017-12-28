@@ -33,7 +33,8 @@ namespace Epidemic.Assets
         public ApplicationState State = ApplicationState.Success;
         public string Username = "guest";
         public string Password = "login";
-        public bool isGuest => new Tools().isGuest(Username, Password);
+        public bool isGuest() => new Tools().isGuest(Username, Password);
+        public bool isPro = false;
     }
     #endregion
 }

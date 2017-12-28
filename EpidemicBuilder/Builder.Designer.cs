@@ -38,22 +38,11 @@
             this.toolStrip_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip_editMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip_projectMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip_viewMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip_console = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStrip_properties = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip_toolbox = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip_preview = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip_editor = new System.Windows.Forms.ToolStripMenuItem();
-            this.heirarchyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip_helpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.hierarchy = new System.Windows.Forms.Panel();
-            this.hierarchyRenamePanel = new System.Windows.Forms.Panel();
-            this.hierarchyRenameLabel = new System.Windows.Forms.Label();
-            this.hierarchyRenameButton = new System.Windows.Forms.Button();
-            this.hierarchyRenameBox = new System.Windows.Forms.TextBox();
             this.hierarchyContent = new System.Windows.Forms.TreeView();
             this.hierarchyLabelBox = new System.Windows.Forms.Panel();
+            this.hierarchyManageButton = new System.Windows.Forms.Button();
             this.hierarchyLabel = new System.Windows.Forms.Label();
             this.editor = new System.Windows.Forms.Panel();
             this.editorTabs = new System.Windows.Forms.TabControl();
@@ -74,9 +63,9 @@
             this.consoleLabel = new System.Windows.Forms.Label();
             this.layoutTop = new System.Windows.Forms.TableLayoutPanel();
             this.layoutBottom = new System.Windows.Forms.TableLayoutPanel();
+            this.editorReloadButton = new System.Windows.Forms.Button();
             this.toolStrip.SuspendLayout();
             this.hierarchy.SuspendLayout();
-            this.hierarchyRenamePanel.SuspendLayout();
             this.hierarchyLabelBox.SuspendLayout();
             this.editor.SuspendLayout();
             this.editorTabs.SuspendLayout();
@@ -100,7 +89,6 @@
             this.toolStrip_fileMenu,
             this.toolStrip_editMenu,
             this.toolStrip_projectMenu,
-            this.toolStrip_viewMenu,
             this.toolStrip_helpMenu});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
@@ -165,62 +153,6 @@
             this.toolStrip_projectMenu.Size = new System.Drawing.Size(67, 24);
             this.toolStrip_projectMenu.Text = "Project";
             // 
-            // toolStrip_viewMenu
-            // 
-            this.toolStrip_viewMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStrip_console,
-            this.toolStripSeparator2,
-            this.toolStrip_properties,
-            this.toolStrip_toolbox,
-            this.toolStrip_preview,
-            this.toolStrip_editor,
-            this.heirarchyToolStripMenuItem});
-            this.toolStrip_viewMenu.ForeColor = System.Drawing.Color.LightGray;
-            this.toolStrip_viewMenu.Name = "toolStrip_viewMenu";
-            this.toolStrip_viewMenu.Size = new System.Drawing.Size(53, 24);
-            this.toolStrip_viewMenu.Text = "View";
-            // 
-            // toolStrip_console
-            // 
-            this.toolStrip_console.Name = "toolStrip_console";
-            this.toolStrip_console.Size = new System.Drawing.Size(151, 26);
-            this.toolStrip_console.Text = "Console";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(148, 6);
-            // 
-            // toolStrip_properties
-            // 
-            this.toolStrip_properties.Name = "toolStrip_properties";
-            this.toolStrip_properties.Size = new System.Drawing.Size(151, 26);
-            this.toolStrip_properties.Text = "Properties";
-            // 
-            // toolStrip_toolbox
-            // 
-            this.toolStrip_toolbox.Name = "toolStrip_toolbox";
-            this.toolStrip_toolbox.Size = new System.Drawing.Size(151, 26);
-            this.toolStrip_toolbox.Text = "Toolbox";
-            // 
-            // toolStrip_preview
-            // 
-            this.toolStrip_preview.Name = "toolStrip_preview";
-            this.toolStrip_preview.Size = new System.Drawing.Size(151, 26);
-            this.toolStrip_preview.Text = "Preview";
-            // 
-            // toolStrip_editor
-            // 
-            this.toolStrip_editor.Name = "toolStrip_editor";
-            this.toolStrip_editor.Size = new System.Drawing.Size(151, 26);
-            this.toolStrip_editor.Text = "Editor";
-            // 
-            // heirarchyToolStripMenuItem
-            // 
-            this.heirarchyToolStripMenuItem.Name = "heirarchyToolStripMenuItem";
-            this.heirarchyToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
-            this.heirarchyToolStripMenuItem.Text = "Heirarchy";
-            // 
             // toolStrip_helpMenu
             // 
             this.toolStrip_helpMenu.ForeColor = System.Drawing.Color.LightGray;
@@ -233,7 +165,6 @@
             this.hierarchy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.hierarchy.Controls.Add(this.hierarchyRenamePanel);
             this.hierarchy.Controls.Add(this.hierarchyContent);
             this.hierarchy.Controls.Add(this.hierarchyLabelBox);
             this.hierarchy.Location = new System.Drawing.Point(3, 3);
@@ -241,75 +172,43 @@
             this.hierarchy.Size = new System.Drawing.Size(204, 341);
             this.hierarchy.TabIndex = 0;
             // 
-            // hierarchyRenamePanel
-            // 
-            this.hierarchyRenamePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.hierarchyRenamePanel.Controls.Add(this.hierarchyRenameLabel);
-            this.hierarchyRenamePanel.Controls.Add(this.hierarchyRenameButton);
-            this.hierarchyRenamePanel.Controls.Add(this.hierarchyRenameBox);
-            this.hierarchyRenamePanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.hierarchyRenamePanel.Location = new System.Drawing.Point(0, 293);
-            this.hierarchyRenamePanel.Name = "hierarchyRenamePanel";
-            this.hierarchyRenamePanel.Size = new System.Drawing.Size(204, 48);
-            this.hierarchyRenamePanel.TabIndex = 2;
-            // 
-            // hierarchyRenameLabel
-            // 
-            this.hierarchyRenameLabel.AutoSize = true;
-            this.hierarchyRenameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.hierarchyRenameLabel.ForeColor = System.Drawing.Color.White;
-            this.hierarchyRenameLabel.Location = new System.Drawing.Point(4, 4);
-            this.hierarchyRenameLabel.Name = "hierarchyRenameLabel";
-            this.hierarchyRenameLabel.Size = new System.Drawing.Size(98, 17);
-            this.hierarchyRenameLabel.TabIndex = 3;
-            this.hierarchyRenameLabel.Text = "Change Name";
-            // 
-            // hierarchyRenameButton
-            // 
-            this.hierarchyRenameButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.hierarchyRenameButton.FlatAppearance.BorderSize = 0;
-            this.hierarchyRenameButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.hierarchyRenameButton.Location = new System.Drawing.Point(126, 3);
-            this.hierarchyRenameButton.Name = "hierarchyRenameButton";
-            this.hierarchyRenameButton.Size = new System.Drawing.Size(75, 21);
-            this.hierarchyRenameButton.TabIndex = 2;
-            this.hierarchyRenameButton.Text = "Rename";
-            this.hierarchyRenameButton.UseVisualStyleBackColor = true;
-            this.hierarchyRenameButton.Click += new System.EventHandler(this.hierarchyRenameButton_Click);
-            // 
-            // hierarchyRenameBox
-            // 
-            this.hierarchyRenameBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.hierarchyRenameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.hierarchyRenameBox.Location = new System.Drawing.Point(3, 28);
-            this.hierarchyRenameBox.Name = "hierarchyRenameBox";
-            this.hierarchyRenameBox.Size = new System.Drawing.Size(198, 15);
-            this.hierarchyRenameBox.TabIndex = 1;
-            // 
             // hierarchyContent
             // 
-            this.hierarchyContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.hierarchyContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.hierarchyContent.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.hierarchyContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hierarchyContent.ForeColor = System.Drawing.Color.White;
             this.hierarchyContent.Location = new System.Drawing.Point(0, 24);
             this.hierarchyContent.Name = "hierarchyContent";
-            this.hierarchyContent.Size = new System.Drawing.Size(204, 270);
+            this.hierarchyContent.Size = new System.Drawing.Size(204, 317);
             this.hierarchyContent.TabIndex = 2;
             this.hierarchyContent.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.hierarchyContent_NodeMouseDoubleClick);
             // 
             // hierarchyLabelBox
             // 
             this.hierarchyLabelBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.hierarchyLabelBox.Controls.Add(this.hierarchyManageButton);
             this.hierarchyLabelBox.Controls.Add(this.hierarchyLabel);
             this.hierarchyLabelBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.hierarchyLabelBox.Location = new System.Drawing.Point(0, 0);
             this.hierarchyLabelBox.Name = "hierarchyLabelBox";
             this.hierarchyLabelBox.Size = new System.Drawing.Size(204, 24);
             this.hierarchyLabelBox.TabIndex = 1;
+            // 
+            // hierarchyManageButton
+            // 
+            this.hierarchyManageButton.BackColor = System.Drawing.Color.Maroon;
+            this.hierarchyManageButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.hierarchyManageButton.FlatAppearance.BorderSize = 0;
+            this.hierarchyManageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hierarchyManageButton.ForeColor = System.Drawing.Color.White;
+            this.hierarchyManageButton.Location = new System.Drawing.Point(129, 0);
+            this.hierarchyManageButton.Name = "hierarchyManageButton";
+            this.hierarchyManageButton.Size = new System.Drawing.Size(75, 24);
+            this.hierarchyManageButton.TabIndex = 1;
+            this.hierarchyManageButton.Text = "Manage";
+            this.hierarchyManageButton.UseVisualStyleBackColor = false;
+            this.hierarchyManageButton.Click += new System.EventHandler(this.hierarchyManageButton_Click);
             // 
             // hierarchyLabel
             // 
@@ -328,6 +227,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.editor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.editor.Controls.Add(this.editorReloadButton);
             this.editor.Controls.Add(this.editorTabs);
             this.editor.Location = new System.Drawing.Point(213, 3);
             this.editor.Name = "editor";
@@ -343,11 +243,11 @@
             this.editorTabs.Controls.Add(this.editorTabs_preview);
             this.editorTabs.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.editorTabs.ItemSize = new System.Drawing.Size(36, 21);
-            this.editorTabs.Location = new System.Drawing.Point(0, 4);
+            this.editorTabs.Location = new System.Drawing.Point(0, 3);
             this.editorTabs.Name = "editorTabs";
             this.editorTabs.Padding = new System.Drawing.Point(0, 0);
             this.editorTabs.SelectedIndex = 0;
-            this.editorTabs.Size = new System.Drawing.Size(416, 337);
+            this.editorTabs.Size = new System.Drawing.Size(416, 338);
             this.editorTabs.TabIndex = 0;
             this.editorTabs.SelectedIndexChanged += new System.EventHandler(this.editorTabs_SelectedIndexChanged);
             // 
@@ -358,7 +258,7 @@
             this.editorTabs_editor.Location = new System.Drawing.Point(4, 25);
             this.editorTabs_editor.Margin = new System.Windows.Forms.Padding(0);
             this.editorTabs_editor.Name = "editorTabs_editor";
-            this.editorTabs_editor.Size = new System.Drawing.Size(408, 308);
+            this.editorTabs_editor.Size = new System.Drawing.Size(408, 309);
             this.editorTabs_editor.TabIndex = 0;
             this.editorTabs_editor.Text = "Editor";
             // 
@@ -369,7 +269,7 @@
             this.editorEngine.Location = new System.Drawing.Point(0, 0);
             this.editorEngine.Name = "editorEngine";
             this.editorEngine.PostProcessing = false;
-            this.editorEngine.Size = new System.Drawing.Size(408, 308);
+            this.editorEngine.Size = new System.Drawing.Size(408, 309);
             this.editorEngine.TabIndex = 0;
             // 
             // editorTabs_preview
@@ -564,6 +464,20 @@
             this.layoutBottom.Size = new System.Drawing.Size(844, 166);
             this.layoutBottom.TabIndex = 5;
             // 
+            // editorReloadButton
+            // 
+            this.editorReloadButton.BackColor = System.Drawing.Color.Maroon;
+            this.editorReloadButton.FlatAppearance.BorderSize = 0;
+            this.editorReloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editorReloadButton.ForeColor = System.Drawing.Color.White;
+            this.editorReloadButton.Location = new System.Drawing.Point(341, 0);
+            this.editorReloadButton.Name = "editorReloadButton";
+            this.editorReloadButton.Size = new System.Drawing.Size(75, 24);
+            this.editorReloadButton.TabIndex = 2;
+            this.editorReloadButton.Text = "Reload";
+            this.editorReloadButton.UseVisualStyleBackColor = false;
+            this.editorReloadButton.Click += new System.EventHandler(this.editorReloadButton_Click);
+            // 
             // Builder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -582,8 +496,6 @@
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
             this.hierarchy.ResumeLayout(false);
-            this.hierarchyRenamePanel.ResumeLayout(false);
-            this.hierarchyRenamePanel.PerformLayout();
             this.hierarchyLabelBox.ResumeLayout(false);
             this.hierarchyLabelBox.PerformLayout();
             this.editor.ResumeLayout(false);
@@ -617,15 +529,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStrip_exit;
         private System.Windows.Forms.ToolStripMenuItem toolStrip_editMenu;
         private System.Windows.Forms.ToolStripMenuItem toolStrip_projectMenu;
-        private System.Windows.Forms.ToolStripMenuItem toolStrip_viewMenu;
-        private System.Windows.Forms.ToolStripMenuItem toolStrip_console;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem toolStrip_properties;
-        private System.Windows.Forms.ToolStripMenuItem toolStrip_toolbox;
-        private System.Windows.Forms.ToolStripMenuItem toolStrip_preview;
-        private System.Windows.Forms.ToolStripMenuItem toolStrip_editor;
         private System.Windows.Forms.ToolStripMenuItem toolStrip_helpMenu;
-        private System.Windows.Forms.ToolStripMenuItem heirarchyToolStripMenuItem;
         private System.Windows.Forms.Panel hierarchy;
         private System.Windows.Forms.Panel editor;
         private System.Windows.Forms.Panel properties;
@@ -649,10 +553,8 @@
         private System.Windows.Forms.ListBox toolboxContents;
         private Runtime.EngineWindow previewEngine;
         private Runtime.EngineWindow editorEngine;
-        private System.Windows.Forms.Panel hierarchyRenamePanel;
-        private System.Windows.Forms.Button hierarchyRenameButton;
-        private System.Windows.Forms.TextBox hierarchyRenameBox;
-        private System.Windows.Forms.Label hierarchyRenameLabel;
+        private System.Windows.Forms.Button hierarchyManageButton;
+        private System.Windows.Forms.Button editorReloadButton;
     }
 }
 

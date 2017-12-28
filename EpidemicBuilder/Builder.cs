@@ -17,13 +17,13 @@ namespace Epidemic.Builder
     public partial class Builder : Form
     {
         public Element selectedElem;
-        public AuthToken userAuth = new AuthToken();
+        public AuthToken user = new AuthToken();
 
         public Builder(AuthToken login)
         {
             InitializeComponent();
 
-            userAuth = login;
+            user = login;
         }
 
         #region Functions
@@ -32,6 +32,35 @@ namespace Epidemic.Builder
         #endregion
 
         #region Event Handlers
+        #region Builder Form
+        private void Builder_Load(object sender, EventArgs e)
+        {
+            // Disable Paid Options
+            if (user.isGuest() || !user.isPro)
+            {
+                Text += " - Free";
+            }
+            else // Enable Paid Options
+            {
+                Text += " - Pro";
+            }
+
+            // Configure EngineWindows
+            editorEngine.Init();
+            previewEngine.Init();
+
+            // Load Toolbox Options
+            var types = new string[] { "Box" };
+
+            toolboxContents.Items.Clear();
+            foreach (string type in types)
+            {
+                toolboxContents.Items.Add(type);
+            }
+        }
+        #endregion
+
+        #region Toolbox
         private void toolboxContents_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (toolboxContents.SelectedItem != null)
@@ -56,7 +85,9 @@ namespace Epidemic.Builder
                 }
             }
         }
+        #endregion
 
+        #region Editor/Preview
         private void editorTabs_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (editorTabs.SelectedIndex == 0)
@@ -73,22 +104,16 @@ namespace Epidemic.Builder
             }
         }
 
-        private void Builder_Load(object sender, EventArgs e)
+        private void editorReloadButton_Click(object sender, EventArgs e)
         {
-            // Configure EngineWindows
-            editorEngine.Init();
-            previewEngine.Init();
-
-            // Load Toolbox Options
-            var types = new string[] { "Box" };
-
-            toolboxContents.Items.Clear();
-            foreach (string type in types)
-            {
-                toolboxContents.Items.Add(type);
-            }
+            if (editorTabs.SelectedIndex == 0)
+                editorEngine.render();
+            else
+                previewEngine.render();
         }
+        #endregion
 
+        #region Hierarchy
         private void hierarchyContent_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             foreach (Element elem in editorEngine.elemRegistry)
@@ -102,18 +127,15 @@ namespace Epidemic.Builder
             }
         }
 
-        private void hierarchyRenameButton_Click(object sender, EventArgs e)
+        private void hierarchyManageButton_Click(object sender, EventArgs e)
         {
-            var newName = hierarchyRenameBox.Text;
-
-            if (newName != "" && hierarchyContent.SelectedNode != null && selectedElem != null)
-            {
-                hierarchyContent.SelectedNode.Text = newName;
-                selectedElem.elem.Name = newName;
-            }
+            MessageBox.Show("ERor keK");
         }
+        #endregion
 
+        #region Properties
         private void propertiesContent_PropertyValueChanged(object s, PropertyValueChangedEventArgs e) => updateElem();
+        #endregion
         #endregion
     }
 }

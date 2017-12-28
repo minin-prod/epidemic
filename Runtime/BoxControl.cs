@@ -15,11 +15,8 @@ namespace Epidemic.Runtime.Elements
         public BoxControl()
         {
             InitializeComponent();
-            Anchor = AnchorStyles.None;
         }
 
         private void BoxControl_Load(object sender, EventArgs e) => OnLoad();
-
-        public void OnLoad() {  }
     }
 }
