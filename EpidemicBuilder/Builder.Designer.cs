@@ -48,7 +48,9 @@
             this.editorReloadButton = new System.Windows.Forms.Button();
             this.editorTabs = new System.Windows.Forms.TabControl();
             this.editorTabs_editor = new System.Windows.Forms.TabPage();
+            this.editorEngine = new Epidemic.Runtime.EngineWindow();
             this.editorTabs_preview = new System.Windows.Forms.TabPage();
+            this.previewEngine = new Epidemic.Runtime.EngineWindow();
             this.properties = new System.Windows.Forms.Panel();
             this.propertiesContent = new System.Windows.Forms.PropertyGrid();
             this.propertiesLabelBox = new System.Windows.Forms.Panel();
@@ -58,13 +60,11 @@
             this.toolboxLabelBox = new System.Windows.Forms.Panel();
             this.toolboxLabel = new System.Windows.Forms.Label();
             this.console = new System.Windows.Forms.Panel();
+            this.consoleContent = new Epidemic.Runtime.Console();
             this.consoleLabelBox = new System.Windows.Forms.Panel();
             this.consoleLabel = new System.Windows.Forms.Label();
             this.layoutTop = new System.Windows.Forms.TableLayoutPanel();
             this.layoutBottom = new System.Windows.Forms.TableLayoutPanel();
-            this.editorEngine = new Epidemic.Runtime.EngineWindow();
-            this.previewEngine = new Epidemic.Runtime.EngineWindow();
-            this.consoleContent = new System.Windows.Forms.TextBox();
             this.toolStrip.SuspendLayout();
             this.hierarchy.SuspendLayout();
             this.hierarchyLabelBox.SuspendLayout();
@@ -168,10 +168,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.hierarchy.Controls.Add(this.hierarchyContent);
             this.hierarchy.Controls.Add(this.hierarchyLabelBox);
-            this.hierarchy.Location = new System.Drawing.Point(0, 0);
-            this.hierarchy.Margin = new System.Windows.Forms.Padding(0);
+            this.hierarchy.Location = new System.Drawing.Point(6, 6);
             this.hierarchy.Name = "hierarchy";
-            this.hierarchy.Size = new System.Drawing.Size(210, 347);
+            this.hierarchy.Size = new System.Drawing.Size(202, 293);
             this.hierarchy.TabIndex = 0;
             // 
             // hierarchyContent
@@ -183,7 +182,7 @@
             this.hierarchyContent.Location = new System.Drawing.Point(0, 24);
             this.hierarchyContent.Margin = new System.Windows.Forms.Padding(0);
             this.hierarchyContent.Name = "hierarchyContent";
-            this.hierarchyContent.Size = new System.Drawing.Size(210, 323);
+            this.hierarchyContent.Size = new System.Drawing.Size(202, 269);
             this.hierarchyContent.TabIndex = 2;
             this.hierarchyContent.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.hierarchyContent_NodeMouseDoubleClick);
             // 
@@ -196,7 +195,7 @@
             this.hierarchyLabelBox.Location = new System.Drawing.Point(0, 0);
             this.hierarchyLabelBox.Margin = new System.Windows.Forms.Padding(0);
             this.hierarchyLabelBox.Name = "hierarchyLabelBox";
-            this.hierarchyLabelBox.Size = new System.Drawing.Size(210, 24);
+            this.hierarchyLabelBox.Size = new System.Drawing.Size(202, 24);
             this.hierarchyLabelBox.TabIndex = 1;
             // 
             // hierarchyManageButton
@@ -206,7 +205,7 @@
             this.hierarchyManageButton.FlatAppearance.BorderSize = 0;
             this.hierarchyManageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.hierarchyManageButton.ForeColor = System.Drawing.Color.White;
-            this.hierarchyManageButton.Location = new System.Drawing.Point(135, 0);
+            this.hierarchyManageButton.Location = new System.Drawing.Point(127, 0);
             this.hierarchyManageButton.Margin = new System.Windows.Forms.Padding(0);
             this.hierarchyManageButton.Name = "hierarchyManageButton";
             this.hierarchyManageButton.Size = new System.Drawing.Size(75, 24);
@@ -235,10 +234,9 @@
             this.editor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.editor.Controls.Add(this.editorReloadButton);
             this.editor.Controls.Add(this.editorTabs);
-            this.editor.Location = new System.Drawing.Point(210, 0);
-            this.editor.Margin = new System.Windows.Forms.Padding(0);
+            this.editor.Location = new System.Drawing.Point(214, 6);
             this.editor.Name = "editor";
-            this.editor.Size = new System.Drawing.Size(422, 347);
+            this.editor.Size = new System.Drawing.Size(413, 293);
             this.editor.TabIndex = 2;
             // 
             // editorReloadButton
@@ -248,7 +246,7 @@
             this.editorReloadButton.FlatAppearance.BorderSize = 0;
             this.editorReloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editorReloadButton.ForeColor = System.Drawing.Color.White;
-            this.editorReloadButton.Location = new System.Drawing.Point(347, 0);
+            this.editorReloadButton.Location = new System.Drawing.Point(338, 0);
             this.editorReloadButton.Margin = new System.Windows.Forms.Padding(0);
             this.editorReloadButton.Name = "editorReloadButton";
             this.editorReloadButton.Size = new System.Drawing.Size(75, 24);
@@ -271,7 +269,7 @@
             this.editorTabs.Name = "editorTabs";
             this.editorTabs.Padding = new System.Drawing.Point(0, 0);
             this.editorTabs.SelectedIndex = 0;
-            this.editorTabs.Size = new System.Drawing.Size(422, 344);
+            this.editorTabs.Size = new System.Drawing.Size(413, 290);
             this.editorTabs.TabIndex = 0;
             this.editorTabs.SelectedIndexChanged += new System.EventHandler(this.editorTabs_SelectedIndexChanged);
             // 
@@ -282,9 +280,20 @@
             this.editorTabs_editor.Location = new System.Drawing.Point(4, 25);
             this.editorTabs_editor.Margin = new System.Windows.Forms.Padding(0);
             this.editorTabs_editor.Name = "editorTabs_editor";
-            this.editorTabs_editor.Size = new System.Drawing.Size(414, 315);
+            this.editorTabs_editor.Size = new System.Drawing.Size(405, 261);
             this.editorTabs_editor.TabIndex = 0;
             this.editorTabs_editor.Text = "Editor";
+            // 
+            // editorEngine
+            // 
+            this.editorEngine.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.editorEngine.IsEditor = true;
+            this.editorEngine.Location = new System.Drawing.Point(0, 0);
+            this.editorEngine.Margin = new System.Windows.Forms.Padding(0);
+            this.editorEngine.Name = "editorEngine";
+            this.editorEngine.PostProcessing = false;
+            this.editorEngine.Size = new System.Drawing.Size(405, 261);
+            this.editorEngine.TabIndex = 0;
             // 
             // editorTabs_preview
             // 
@@ -293,9 +302,20 @@
             this.editorTabs_preview.Location = new System.Drawing.Point(4, 25);
             this.editorTabs_preview.Margin = new System.Windows.Forms.Padding(0);
             this.editorTabs_preview.Name = "editorTabs_preview";
-            this.editorTabs_preview.Size = new System.Drawing.Size(408, 309);
+            this.editorTabs_preview.Size = new System.Drawing.Size(405, 261);
             this.editorTabs_preview.TabIndex = 1;
             this.editorTabs_preview.Text = "Preview";
+            // 
+            // previewEngine
+            // 
+            this.previewEngine.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.previewEngine.IsEditor = false;
+            this.previewEngine.Location = new System.Drawing.Point(0, 0);
+            this.previewEngine.Margin = new System.Windows.Forms.Padding(0);
+            this.previewEngine.Name = "previewEngine";
+            this.previewEngine.PostProcessing = true;
+            this.previewEngine.Size = new System.Drawing.Size(405, 261);
+            this.previewEngine.TabIndex = 0;
             // 
             // properties
             // 
@@ -304,10 +324,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.properties.Controls.Add(this.propertiesContent);
             this.properties.Controls.Add(this.propertiesLabelBox);
-            this.properties.Location = new System.Drawing.Point(632, 0);
-            this.properties.Margin = new System.Windows.Forms.Padding(0);
+            this.properties.Location = new System.Drawing.Point(633, 6);
             this.properties.Name = "properties";
-            this.properties.Size = new System.Drawing.Size(212, 347);
+            this.properties.Size = new System.Drawing.Size(205, 293);
             this.properties.TabIndex = 1;
             // 
             // propertiesContent
@@ -329,7 +348,7 @@
             this.propertiesContent.Margin = new System.Windows.Forms.Padding(0);
             this.propertiesContent.Name = "propertiesContent";
             this.propertiesContent.SelectedItemWithFocusForeColor = System.Drawing.SystemColors.Control;
-            this.propertiesContent.Size = new System.Drawing.Size(212, 323);
+            this.propertiesContent.Size = new System.Drawing.Size(205, 269);
             this.propertiesContent.TabIndex = 2;
             this.propertiesContent.ViewBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.propertiesContent.ViewBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -344,7 +363,7 @@
             this.propertiesLabelBox.Location = new System.Drawing.Point(0, 0);
             this.propertiesLabelBox.Margin = new System.Windows.Forms.Padding(0);
             this.propertiesLabelBox.Name = "propertiesLabelBox";
-            this.propertiesLabelBox.Size = new System.Drawing.Size(212, 24);
+            this.propertiesLabelBox.Size = new System.Drawing.Size(205, 24);
             this.propertiesLabelBox.TabIndex = 2;
             // 
             // propertiesLabel
@@ -365,10 +384,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.toolbox.Controls.Add(this.toolboxContents);
             this.toolbox.Controls.Add(this.toolboxLabelBox);
-            this.toolbox.Location = new System.Drawing.Point(0, 6);
-            this.toolbox.Margin = new System.Windows.Forms.Padding(0);
+            this.toolbox.Location = new System.Drawing.Point(3, 3);
             this.toolbox.Name = "toolbox";
-            this.toolbox.Size = new System.Drawing.Size(324, 160);
+            this.toolbox.Size = new System.Drawing.Size(318, 204);
             this.toolbox.TabIndex = 3;
             // 
             // toolboxContents
@@ -384,7 +402,7 @@
             this.toolboxContents.Location = new System.Drawing.Point(0, 24);
             this.toolboxContents.Margin = new System.Windows.Forms.Padding(0);
             this.toolboxContents.Name = "toolboxContents";
-            this.toolboxContents.Size = new System.Drawing.Size(324, 136);
+            this.toolboxContents.Size = new System.Drawing.Size(318, 180);
             this.toolboxContents.TabIndex = 4;
             this.toolboxContents.SelectedIndexChanged += new System.EventHandler(this.toolboxContents_SelectedIndexChanged);
             // 
@@ -396,7 +414,7 @@
             this.toolboxLabelBox.Location = new System.Drawing.Point(0, 0);
             this.toolboxLabelBox.Margin = new System.Windows.Forms.Padding(0);
             this.toolboxLabelBox.Name = "toolboxLabelBox";
-            this.toolboxLabelBox.Size = new System.Drawing.Size(324, 24);
+            this.toolboxLabelBox.Size = new System.Drawing.Size(318, 24);
             this.toolboxLabelBox.TabIndex = 2;
             // 
             // toolboxLabel
@@ -417,11 +435,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.console.Controls.Add(this.consoleContent);
             this.console.Controls.Add(this.consoleLabelBox);
-            this.console.Location = new System.Drawing.Point(324, 6);
-            this.console.Margin = new System.Windows.Forms.Padding(0);
+            this.console.Location = new System.Drawing.Point(327, 3);
             this.console.Name = "console";
-            this.console.Size = new System.Drawing.Size(520, 160);
+            this.console.Size = new System.Drawing.Size(514, 204);
             this.console.TabIndex = 4;
+            // 
+            // consoleContent
+            // 
+            this.consoleContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.consoleContent.Location = new System.Drawing.Point(0, 24);
+            this.consoleContent.Name = "consoleContent";
+            this.consoleContent.Size = new System.Drawing.Size(514, 180);
+            this.consoleContent.TabIndex = 4;
             // 
             // consoleLabelBox
             // 
@@ -431,7 +456,7 @@
             this.consoleLabelBox.Location = new System.Drawing.Point(0, 0);
             this.consoleLabelBox.Margin = new System.Windows.Forms.Padding(0);
             this.consoleLabelBox.Name = "consoleLabelBox";
-            this.consoleLabelBox.Size = new System.Drawing.Size(520, 24);
+            this.consoleLabelBox.Size = new System.Drawing.Size(514, 24);
             this.consoleLabelBox.TabIndex = 3;
             // 
             // consoleLabel
@@ -459,11 +484,11 @@
             this.layoutTop.Controls.Add(this.editor, 1, 0);
             this.layoutTop.Controls.Add(this.hierarchy, 0, 0);
             this.layoutTop.Location = new System.Drawing.Point(0, 31);
-            this.layoutTop.Margin = new System.Windows.Forms.Padding(0);
             this.layoutTop.Name = "layoutTop";
+            this.layoutTop.Padding = new System.Windows.Forms.Padding(3);
             this.layoutTop.RowCount = 1;
             this.layoutTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.layoutTop.Size = new System.Drawing.Size(844, 347);
+            this.layoutTop.Size = new System.Drawing.Size(844, 305);
             this.layoutTop.TabIndex = 2;
             // 
             // layoutBottom
@@ -474,50 +499,13 @@
             this.layoutBottom.Controls.Add(this.console, 1, 0);
             this.layoutBottom.Controls.Add(this.toolbox, 0, 0);
             this.layoutBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.layoutBottom.Location = new System.Drawing.Point(0, 380);
+            this.layoutBottom.Location = new System.Drawing.Point(0, 336);
             this.layoutBottom.Margin = new System.Windows.Forms.Padding(0);
             this.layoutBottom.Name = "layoutBottom";
             this.layoutBottom.RowCount = 1;
             this.layoutBottom.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.layoutBottom.Size = new System.Drawing.Size(844, 166);
+            this.layoutBottom.Size = new System.Drawing.Size(844, 210);
             this.layoutBottom.TabIndex = 5;
-            // 
-            // editorEngine
-            // 
-            this.editorEngine.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.editorEngine.IsEditor = true;
-            this.editorEngine.Location = new System.Drawing.Point(0, 0);
-            this.editorEngine.Margin = new System.Windows.Forms.Padding(0);
-            this.editorEngine.Name = "editorEngine";
-            this.editorEngine.PostProcessing = false;
-            this.editorEngine.Size = new System.Drawing.Size(414, 315);
-            this.editorEngine.TabIndex = 0;
-            // 
-            // previewEngine
-            // 
-            this.previewEngine.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.previewEngine.IsEditor = false;
-            this.previewEngine.Location = new System.Drawing.Point(0, 0);
-            this.previewEngine.Margin = new System.Windows.Forms.Padding(0);
-            this.previewEngine.Name = "previewEngine";
-            this.previewEngine.PostProcessing = true;
-            this.previewEngine.Size = new System.Drawing.Size(408, 309);
-            this.previewEngine.TabIndex = 0;
-            // 
-            // consoleContent
-            // 
-            this.consoleContent.BackColor = System.Drawing.Color.Black;
-            this.consoleContent.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.consoleContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.consoleContent.ForeColor = System.Drawing.Color.LightGray;
-            this.consoleContent.Location = new System.Drawing.Point(0, 24);
-            this.consoleContent.Margin = new System.Windows.Forms.Padding(0);
-            this.consoleContent.Multiline = true;
-            this.consoleContent.Name = "consoleContent";
-            this.consoleContent.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.consoleContent.Size = new System.Drawing.Size(520, 136);
-            this.consoleContent.TabIndex = 4;
-            this.consoleContent.Text = "woah dude this is dank!";
             // 
             // Builder
             // 
@@ -550,7 +538,6 @@
             this.toolboxLabelBox.ResumeLayout(false);
             this.toolboxLabelBox.PerformLayout();
             this.console.ResumeLayout(false);
-            this.console.PerformLayout();
             this.consoleLabelBox.ResumeLayout(false);
             this.consoleLabelBox.PerformLayout();
             this.layoutTop.ResumeLayout(false);
@@ -597,7 +584,7 @@
         private Runtime.EngineWindow editorEngine;
         private System.Windows.Forms.Button hierarchyManageButton;
         private System.Windows.Forms.Button editorReloadButton;
-        private System.Windows.Forms.TextBox consoleContent;
+        private Runtime.Console consoleContent;
     }
 }
 

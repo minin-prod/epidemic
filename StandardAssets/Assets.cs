@@ -20,6 +20,13 @@ namespace Epidemic.Assets
         Ok,
         Failiure
     }
+
+    public enum ConsoleType
+    {
+        Error,
+        Warning,
+        Information
+    }
     #endregion
 
     #region Classes

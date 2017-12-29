@@ -16,6 +16,7 @@ namespace Epidemic.Builder
 {
     public partial class Builder : Form
     {
+        public Runtime.Console c;
         public Element selectedElem;
         public AuthToken user = new AuthToken();
 
@@ -44,6 +45,10 @@ namespace Epidemic.Builder
             {
                 Text += " - Pro";
             }
+
+            // Create Console
+            c = consoleContent;
+            c.Text = "Welcome to Epidemic Builder!";
 
             // Configure EngineWindows
             editorEngine.Init();
@@ -106,6 +111,7 @@ namespace Epidemic.Builder
 
         private void editorReloadButton_Click(object sender, EventArgs e)
         {
+
             if (editorTabs.SelectedIndex == 0)
                 editorEngine.render();
             else
