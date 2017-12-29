@@ -111,11 +111,12 @@ namespace Epidemic.Builder
 
         private void editorReloadButton_Click(object sender, EventArgs e)
         {
-
             if (editorTabs.SelectedIndex == 0)
                 editorEngine.render();
             else
                 previewEngine.render();
+
+            c.add("Refreshed!");
         }
         #endregion
 

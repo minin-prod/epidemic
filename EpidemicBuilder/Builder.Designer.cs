@@ -112,19 +112,19 @@
             // toolStrip_open
             // 
             this.toolStrip_open.Name = "toolStrip_open";
-            this.toolStrip_open.Size = new System.Drawing.Size(181, 26);
+            this.toolStrip_open.Size = new System.Drawing.Size(135, 26);
             this.toolStrip_open.Text = "Open";
             // 
             // toolStrip_save
             // 
             this.toolStrip_save.Name = "toolStrip_save";
-            this.toolStrip_save.Size = new System.Drawing.Size(181, 26);
+            this.toolStrip_save.Size = new System.Drawing.Size(135, 26);
             this.toolStrip_save.Text = "Save";
             // 
             // toolStrip_saveAs
             // 
             this.toolStrip_saveAs.Name = "toolStrip_saveAs";
-            this.toolStrip_saveAs.Size = new System.Drawing.Size(181, 26);
+            this.toolStrip_saveAs.Size = new System.Drawing.Size(135, 26);
             this.toolStrip_saveAs.Text = "Save As";
             // 
             // toolStripSeparator1
@@ -132,12 +132,12 @@
             this.toolStripSeparator1.BackColor = System.Drawing.SystemColors.Control;
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripSeparator1.Size = new System.Drawing.Size(178, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(132, 6);
             // 
             // toolStrip_exit
             // 
             this.toolStrip_exit.Name = "toolStrip_exit";
-            this.toolStrip_exit.Size = new System.Drawing.Size(181, 26);
+            this.toolStrip_exit.Size = new System.Drawing.Size(135, 26);
             this.toolStrip_exit.Text = "Exit";
             // 
             // toolStrip_editMenu
@@ -442,7 +442,9 @@
             // 
             // consoleContent
             // 
-            this.consoleContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.consoleContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.consoleContent.Location = new System.Drawing.Point(0, 24);
             this.consoleContent.Name = "consoleContent";
             this.consoleContent.Size = new System.Drawing.Size(514, 180);
